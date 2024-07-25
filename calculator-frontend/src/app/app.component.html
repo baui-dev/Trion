@@ -1,0 +1,25 @@
+<div class="container">
+
+    <h1>Overengineered Calculator</h1>
+
+    <form class="calculator-input">
+
+        <input type="number" name="a" #aInput>
+
+        <select name="operation" #operationSelect>
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+
+        <input type="number" name="b" #bInput>
+
+    </form>
+
+    <button (click)="passToAppComponent(+aInput.value, +bInput.value, operationSelect.value)">Calculate</button>
+
+    <h3 id="result">Result: {{ result }}</h3>
+
+</div>
+
